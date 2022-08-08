@@ -1,0 +1,1 @@
+# bingo_xadrez_verbal
