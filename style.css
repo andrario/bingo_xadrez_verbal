@@ -14,12 +14,23 @@ h1 {
     font-size: 50px;
 }
 
+a {
+    margin: 20px;
+}
+
 table{
     margin-left: auto;
     margin-right: auto;
     /* width: 20vw; */
     max-width: 100px;
     /* max-height: 100px; */
+}
+
+#iconeGithub{
+    width: 100%;
+    padding: 1vw;
+    max-width: 3vw;
+    height: auto;
 }
 
 img{
@@ -39,12 +50,16 @@ td{
 }
 
 @media screen and (max-width: 560px) {
+    h1{
+        font-size: 8vw;
+    }
+
     table{
         margin-left: auto;
         margin-right: auto;
-        width: 20vw;
-        max-width: 100px;
-        max-height: 100px;
+        width: 22vw;
+        max-width: 120px;
+        max-height: 120px;
         /* height: 15vw; */
         font-size: 2.2vw;
         /* overflow-x:auto; */
@@ -57,12 +72,12 @@ td{
     }
 
     td{
-        height: 11vw;
-        width: 11vw;
+        height: 12vw;
+        width: 12vw;
         border: 0.5vw;
         border-color: black;
         border-style: solid;
         background-color: white;
-        min-width: 11vw;
+        min-width: 12vw;
     }
 }
