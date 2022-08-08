@@ -7,7 +7,7 @@ const listaFrasesTotal = [
     "\"Tem um Nerdologia falando sobre\"",
     "\"Eu avisei\"",
     "\"Falamos sobre isso no Repertório\"",
-    "Já falamos disso antes no programa...",
+    "\"Já falamos disso antes no programa...\"",
     "Golpe de Estado",
     "Piada com o Perú",
     "Lançamento de algo em Cuba",
