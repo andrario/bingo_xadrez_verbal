@@ -14,24 +14,12 @@ const listaFrasesTotal = [
     "5ª série",
     "Gloriosa República de Vanuatu",
     "Bezuntadão de Tonga",
-    "8",
-    "9",
-    "10",
-    "11",
-    "12",
-    "13",
-    "14",
-    "15",
-    "16",
-    "17",
-    "18",
-    "Brexit",
 ]
 
 function criaListaFrases(){
     let listaFrases = []
     let tamanho = 0
-    while(tamanho<24){
+    while(tamanho<9){
         indiceAleatorio = Math.floor(Math.random() * listaFrasesTotal.length)
         itemAleatorio = listaFrasesTotal[indiceAleatorio]
         console.log(indiceAleatorio)
@@ -43,8 +31,8 @@ function criaListaFrases(){
         }
         tamanho = listaFrases.length
     }
-    listaFrases[24] = listaFrases[12]
-    listaFrases[12] = ''
+    listaFrases[9] = listaFrases[4]
+    listaFrases[4] = ''
     return listaFrases
 }
 
@@ -52,10 +40,10 @@ function criaTabela(){
     const listaFrases = criaListaFrases()
     let conteudoTabela = ""
     indiceCelula = 0
-    for(i=0;i<5;i++){
+    for(i=0;i<3;i++){
         conteudoTabela += "<tr>"
-        for(j=0;j<5;j++){
-            if(indiceCelula!=12){
+        for(j=0;j<3;j++){
+            if(indiceCelula!=4){
                 conteudoTabela += "<td class=\"celulaBingo\" id="+indiceCelula+">"+listaFrases[indiceCelula]+"</td>"
             }
             else{
