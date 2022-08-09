@@ -16,14 +16,12 @@ const listaFrasesTotal = [
     "Bezuntadão de Tonga",
     "Eleições em Israel",
     "Referência obscura",
-    "10",
-    "11",
-    "12",
-    "13",
-    "14",
-    "15",
-    "16",
-    "17",
+    "Franceses queimam carros",
+    "Nostalgia da FFLCH",
+    "\"DOUBLE FUCKING BREAKING NEWS!\"",
+    "Adicionar algo",
+    "Menção a outro programa da Central 3",
+    "Gafe de lider de governo",
     "Guerra &#128577",
     "Brexit",
 ]
@@ -34,7 +32,6 @@ function criaListaFrases(){
     while(tamanho<24){
         indiceAleatorio = Math.floor(Math.random() * listaFrasesTotal.length)
         itemAleatorio = listaFrasesTotal[indiceAleatorio]
-        console.log(indiceAleatorio)
         if(listaFrases.includes(itemAleatorio)){
             continue
         }
@@ -87,7 +84,6 @@ function celulaClick(idCelula){
         elemento.style["background-color"] = "white"
         elemento.setAttribute("clicado","false")
     }
-    console.log("click")
 }
 
 function adicionaEventos(){
