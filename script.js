@@ -19,7 +19,7 @@ const listaFrasesTotal = [
     "Franceses queimam carros",
     "Nostalgia da FFLCH",
     "\"DOUBLE FUCKING BREAKING NEWS!\"",
-    "Adicionar algo",
+    "Clubismo ",
     "Menção a outro programa da Central 3",
     "Gafe de lider de governo",
     "Guerra &#128577",
