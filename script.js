@@ -11,11 +11,11 @@ const listaFrasesTotal = [
     "Golpe de Estado",
     "Piada com o Perú",
     "Lançamento de algo em Cuba",
-    "5ª série",
+    "5ª Série",
     "Gloriosa República de Vanuatu",
     "Bezuntadão de Tonga",
-    "8",
-    "9",
+    "Eleições em Israel",
+    "Referência obscura",
     "10",
     "11",
     "12",
@@ -24,7 +24,7 @@ const listaFrasesTotal = [
     "15",
     "16",
     "17",
-    "18",
+    "Guerra &#128577",
     "Brexit",
 ]
 
@@ -59,7 +59,7 @@ function criaTabela(){
                 conteudoTabela += "<td class=\"celulaBingo\" id="+indiceCelula+">"+listaFrases[indiceCelula]+"</td>"
             }
             else{
-                conteudoTabela += "<td class=\"celulaBingo\" id="+indiceCelula+"><img src=\"./XV.png\"/></td>"
+                conteudoTabela += "<td class=\"celulaBingo\" id="+indiceCelula+"><img id=\"imgCartela\" src=\"./XV.png\"/></td>"
             }
             indiceCelula++
         }
