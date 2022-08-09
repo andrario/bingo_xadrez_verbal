@@ -19,11 +19,12 @@ const listaFrasesTotal = [
     "Franceses queimam carros",
     "Nostalgia da FFLCH",
     "\"DOUBLE FUCKING BREAKING NEWS!\"",
-    "Clubismo ",
+    "Erdogolum",
     "Menção a outro programa da Central 3",
     "Gafe de lider de governo",
     "Guerra &#128577",
-    "Brexit",
+    "Doce de leite",
+    "\"Urso é um cachorrão\"",
 ]
 
 function criaListaFrases(){
