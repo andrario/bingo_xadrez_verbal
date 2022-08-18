@@ -133,7 +133,7 @@ function verificaCartela(){
     if(vitoria>0){
         if(vitoria==10){
             // window.alert("Cartela cheia!")
-            document.getElementById("imgCartela").style.animation = 'giro 5s linear 5'
+            document.getElementById("imgCartela").style.animation = 'giro 2s linear infinite'
         }
         else if(quina==false){
             // window.alert("Quina!")
