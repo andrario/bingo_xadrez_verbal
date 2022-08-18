@@ -27,6 +27,8 @@ const listaFrasesTotal = [
     "\"Urso é um cachorrão\"",
 ]
 
+let quina = false
+
 function criaListaFrases(){
     let listaFrases = []
     let tamanho = 0
@@ -85,6 +87,7 @@ function celulaClick(idCelula){
         elemento.style["background-color"] = "white"
         elemento.setAttribute("clicado","false")
     }
+    verificaCartela()
 }
 
 function adicionaEventos(){
@@ -95,6 +98,55 @@ function adicionaEventos(){
             elemento.setAttribute("onclick","celulaClick("+elemento.id+")")
             elemento.setAttribute("clicado","false")
         }
+        else{
+            elemento.setAttribute("clicado","true")
+        }
+    }
+}
+
+function verificaLinha(estilos,i){
+    i*=5
+    if(estilos[0+i] === "true" && estilos[1+i] === "true" && estilos[2+i] === "true" && estilos[3+i] === "true" && estilos[4+i] === "true"){
+        return true
+    }
+    return false
+}
+
+function verificaColuna(estilos,i){
+    if(estilos[0+i] === "true" && estilos[5+i] === "true" && estilos[10+i] === "true" && estilos[15+i] === "true" && estilos[20+i] === "true"){
+        return true
+    }
+    return false
+}
+
+function verificaCartela(){
+    estilos = []
+    vitoria = 0
+    for(item of document.querySelectorAll(".celulaBingo")){
+        estilos.push(item.getAttribute('clicado'))
+    }
+    for(i=0;i<5;i++){
+        if( verificaLinha(estilos,i) === true){ vitoria++ }
+        if( verificaColuna(estilos,i) === true){ vitoria++ }
+    }
+    // debugger
+    if(vitoria>0){
+        if(vitoria==10){
+            // window.alert("Cartela cheia!")
+            document.getElementById("imgCartela").style.animation = 'giro 5s linear 5'
+        }
+        else if(quina==false){
+            // window.alert("Quina!")
+            document.getElementById("imgCartela").style.animation = 'giro 2s linear 1'
+            quina = true
+        }
+        else{
+            document.getElementById("imgCartela").style.animation = 'para 1s linear 1'
+        }
+    }
+    else{
+        document.getElementById("imgCartela").style.animation = 'para 1s linear 1'
+        quina = false
     }
 }
 
