@@ -40,13 +40,15 @@ table{
 }
 
 @keyframes giro {
-    from {transform: rotateY(0deg)}
-    to {transform: rotateY(359deg)}
+    0% {transform: rotateY(90deg)}
+    30% {transform: rotateY(0deg)}
+    70% {transform: rotateY(0deg)}
+    100% {transform: rotateY(90deg)}
 }
 
 @keyframes para {
-    from {transform: rotateY(0deg)}
-    to {transform: rotateY(1deg)}
+    from {transform: rotateY(89.9deg)}
+    to {transform: rotateY(90deg)}
 }
 
 td{
@@ -57,6 +59,30 @@ td{
     border-style: solid;
     background-color: white;
     min-width: 100px;
+}
+
+.imgCentro{
+    position: relative;
+    text-align: center;
+}
+
+.txtCentro{
+    position: absolute;
+    font-size: 29px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#msgCentro{
+    background-color: white;
+    border: 4px;
+    border-style: solid;
+    border-color: white;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    border-radius: 100px;
+    transform: rotateY(90deg);
 }
 
 @media screen and (max-width: 560px) {
@@ -95,5 +121,24 @@ td{
         border-style: solid;
         background-color: white;
         min-width: 15vw;
+    }
+
+    .txtCentro{
+        position: absolute;
+        font-size: 3.5vw;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    
+    #msgCentro{
+        background-color: white;
+        border: 4px;
+        border-style: solid;
+        border-color: white;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+        border-radius: 100px;
+        transform: rotateY(90deg);
     }
 }

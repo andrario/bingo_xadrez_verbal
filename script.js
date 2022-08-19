@@ -59,7 +59,7 @@ function criaTabela(){
                 conteudoTabela += "<td class=\"celulaBingo\" id="+indiceCelula+">"+listaFrases[indiceCelula]+"</td>"
             }
             else{
-                conteudoTabela += "<td class=\"celulaBingo\" id="+indiceCelula+"><img id=\"imgCartela\" src=\"./XV.png\"/></td>"
+                conteudoTabela += "<td class=\"celulaBingo\" id="+indiceCelula+"> <div class=\"imgCentro\"> <img id=\"imgCartela\" src=\"./XV.png\"/> <div class=\"txtCentro\"> <p id=\"msgCentro\"> </p> </div> </div> </td>"
             }
             indiceCelula++
         }
@@ -133,19 +133,21 @@ function verificaCartela(){
     if(vitoria>0){
         if(vitoria==10){
             // window.alert("Cartela cheia!")
-            document.getElementById("imgCartela").style.animation = 'giro 2s linear infinite'
+            document.getElementById("msgCentro").textContent = "BINGO!"
+            document.getElementById("msgCentro").style.animation = 'giro 2s linear 1'
         }
         else if(quina==false){
             // window.alert("Quina!")
-            document.getElementById("imgCartela").style.animation = 'giro 2s linear 1'
+            document.getElementById("msgCentro").textContent = "QUINA!"
+            document.getElementById("msgCentro").style.animation = 'giro 2s linear 1'
             quina = true
         }
         else{
-            document.getElementById("imgCartela").style.animation = 'para 1s linear 1'
+            document.getElementById("msgCentro").style.animation = 'para 1s linear 1'
         }
     }
     else{
-        document.getElementById("imgCartela").style.animation = 'para 1s linear 1'
+        document.getElementById("msgCentro").style.animation = 'para 1s linear 1'
         quina = false
     }
 }
